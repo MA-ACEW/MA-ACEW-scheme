@@ -5,12 +5,12 @@ import "./BN254.sol";
 
 /**
  * @title BLSVerificationBenchmark
- * @dev 专门测试BLS标准验证与优化验证的性能比较
+ * @dev 
  */
 contract BLSVerificationBenchmark {
     using BN254 for *;
     
-    // 助手库，用于G2点操作
+ 
     struct G2Point {
         uint256 x0;
         uint256 x1;
@@ -18,22 +18,22 @@ contract BLSVerificationBenchmark {
         uint256 y1;
     }
     
-    // 测试结果结构
+    
     struct TestResult {
-        uint256 standardGas1;          // 标准验证1条消息
-        uint256 optimizedGas1;         // 优化验证1条消息
-        uint256 standardGas5;          // 标准验证5条消息
-        uint256 optimizedGas5;         // 优化验证5条消息
-        uint256 standardGas10;         // 标准验证10条消息
-        uint256 optimizedGas10;        // 优化验证10条消息
-        uint256 standardSuccess1;      // 标准验证1条消息是否成功
-        uint256 optimizedSuccess1;     // 优化验证1条消息是否成功
+        uint256 standardGas1;        
+        uint256 optimizedGas1;         
+        uint256 standardGas5;        
+        uint256 optimizedGas5;        
+        uint256 standardGas10;        
+        uint256 optimizedGas10;        
+        uint256 standardSuccess1;      
+        uint256 optimizedSuccess1;    
     }
     
-    // 存储测试结果
+ 
     TestResult public testResult;
     
-    // 测试数据结构
+   
     struct Signature {
         BN254.G1Point h;
         BN254.G1Point s;
@@ -50,20 +50,13 @@ contract BLSVerificationBenchmark {
         G2Point tvk;
     }
     
-    // 事件
+  
     event DebugLog(string message, uint256 value);
     event TestCompleted(uint256 standard1, uint256 optimized1, uint256 standard5, uint256 optimized5, uint256 standard10, uint256 optimized10);
     
     constructor() {}
     
-    /**
-     * @dev 标准验证方法
-     * @param j 索引值
-     * @param aggSig 聚合签名
-     * @param tag 标签
-     * @param messages 消息数组
-     * @param verificationKeys 验证密钥数组
-     */
+    
     function standardVerification(
         uint64 j,
         Signature memory aggSig,
@@ -71,21 +64,21 @@ contract BLSVerificationBenchmark {
         uint256[] memory messages,
         VerifierKey[] memory verificationKeys
     ) public view returns (bool) {
-        // 检查输入条件
+       
         require(messages.length == verificationKeys.length, "Message and key count mismatch");
         require(messages.length > 0, "No messages to verify");
         
-        // 检查聚合签名中h不为单位元
+      
         if (isInfinity(aggSig.h)) {
             return false;
         }
         
-        // 1. 为所有签名者的信息计算tvk_i + lvk1_i + lvk2_i * m_i
+       
         G2Point memory temp1 = emptyG2Point();
         G2Point memory Z = emptyG2Point();
         
         for (uint i = 0; i < messages.length; i++) {
-            // 计算 lvk1_i + lvk2_i * m_i
+          
             G2Point memory combined = addG2(
                 verificationKeys[i].lvk1,
                 scalarMulG2(verificationKeys[i].lvk2, messages[i])
@@ -100,21 +93,14 @@ contract BLSVerificationBenchmark {
             }
         }
         
-        // 2. 计算(h^δ)^j
+     
         BN254.G1Point memory temp2 = BN254.scalarMul(tag.hDelta, j);
         
-        // 3. 进行配对验证：e(h, temp1)·e(temp2, Z)·e(s, -g2) = 1
+       
         return verifyPairing(aggSig.h, convertToG2(temp1), temp2, convertToG2(Z), aggSig.s);
     }
     
-    /**
-     * @dev 优化验证方法 - 使用随机线性组合
-     * @param j 索引值
-     * @param aggSig 聚合签名
-     * @param tag 标签
-     * @param messages 消息数组
-     * @param verificationKeys 验证密钥数组
-     */
+  
     function optimizedVerification(
         uint64 j,
         Signature memory aggSig,
@@ -122,21 +108,21 @@ contract BLSVerificationBenchmark {
         uint256[] memory messages,
         VerifierKey[] memory verificationKeys
     ) public view returns (bool) {
-        // 检查输入条件
+       
         require(messages.length == verificationKeys.length, "Message and key count mismatch");
         require(messages.length > 0, "No messages to verify");
         
-        // 检查聚合签名中h不为单位元
+      
         if (isInfinity(aggSig.h)) {
             return false;
         }
         
-        // 1. 为所有签名者的信息计算tvk_i + lvk1_i + lvk2_i * m_i
+       
         G2Point memory temp1 = emptyG2Point();
         G2Point memory Z = emptyG2Point();
         
         for (uint i = 0; i < messages.length; i++) {
-            // 计算 lvk1_i + lvk2_i * m_i
+          
             G2Point memory combined = addG2(
                 verificationKeys[i].lvk1,
                 scalarMulG2(verificationKeys[i].lvk2, messages[i])
@@ -151,30 +137,30 @@ contract BLSVerificationBenchmark {
             }
         }
         
-        // 2. 计算(h^δ)^j
+      
         BN254.G1Point memory temp2 = BN254.scalarMul(tag.hDelta, j);
         
-        // 3. 生成随机系数
+       
         uint256 seed = uint256(keccak256(abi.encodePacked(
             block.timestamp,
             aggSig.h.x, 
             aggSig.h.y
         )));
         
-        // 避免使用0作为随机数
+       
         uint256 r1 = (uint256(keccak256(abi.encodePacked(seed, uint256(1)))) % (BN254.R_MOD - 1)) + 1;
         uint256 r2 = (uint256(keccak256(abi.encodePacked(seed, uint256(2)))) % (BN254.R_MOD - 1)) + 1;
         
-        // 4. 计算 G1 点的线性组合
+       
         BN254.G1Point memory combinedG1 = aggSig.h;
         combinedG1 = BN254.add(combinedG1, BN254.scalarMul(temp2, r1));
         combinedG1 = BN254.add(combinedG1, BN254.scalarMul(aggSig.s, r2));
         
-        // 5. 计算 r1^-1 和 r2^-1
+        
         uint256 r1Inv = BN254.invert(r1);
         uint256 r2Inv = BN254.invert(r2);
         
-        // 6. 计算 G2 点的线性组合
+     
         G2Point memory scaledZ = scalarMulG2(Z, r1Inv);
         G2Point memory negG2 = getNegativeG2Generator();
         G2Point memory scaledNegG2 = scalarMulG2(negG2, r2Inv);
@@ -182,12 +168,12 @@ contract BLSVerificationBenchmark {
         G2Point memory combinedG2 = addG2(temp1, scaledZ);
         combinedG2 = addG2(combinedG2, scaledNegG2);
         
-        // 7. 使用单个配对验证
+      
         return verifySinglePairing(combinedG1, convertToG2(combinedG2));
     }
     
     /**
-     * @dev 验证三对配对
+     * @dev 
      */
     function verifyPairing(
         BN254.G1Point memory a, BN254.G2Point memory A,
@@ -209,11 +195,11 @@ contract BLSVerificationBenchmark {
     }
     
     /**
-     * @dev 获取G2上的负生成元 (-g2)
+     * @dev
      */
     function getNegativeG2Point() internal view returns (BN254.G2Point memory) {
         BN254.G2Point memory g2 = BN254.P2();
-        // G2点的负元：只需改变y坐标的符号（在有限域中是P_MOD减去原y值）
+       
         return BN254.G2Point({
             x0: g2.x0,
             x1: g2.x1,
@@ -223,7 +209,7 @@ contract BLSVerificationBenchmark {
     }
     
     /**
-     * @dev 执行单个配对验证
+     * @dev 
      */
     function verifySinglePairing(BN254.G1Point memory p1, BN254.G2Point memory p2) 
         internal view returns (bool) 
@@ -237,7 +223,7 @@ contract BLSVerificationBenchmark {
         input[4] = p2.y0;
         input[5] = p2.y1;
         
-        // 添加单位元素作为第二对
+      
         input[6] = 0;
         input[7] = 0;
         input[8] = 0;
@@ -258,7 +244,7 @@ contract BLSVerificationBenchmark {
     }
     
     /**
-     * @dev 生成测试数据
+     * @dev
      */
     function generateTestData(uint256 count) internal view returns (
         Signature memory aggSig,
@@ -266,11 +252,11 @@ contract BLSVerificationBenchmark {
         uint256[] memory messages,
         VerifierKey[] memory verificationKeys
     ) {
-        // 使用基本点
+       
         BN254.G1Point memory g1 = BN254.P1();
         BN254.G2Point memory g2 = BN254.P2();
         
-        // 创建签名和标签
+       
         aggSig = Signature({
             h: g1,
             s: BN254.scalarMul(g1, 123)
@@ -281,16 +267,16 @@ contract BLSVerificationBenchmark {
             hDelta: BN254.scalarMul(g1, 789)
         });
         
-        // 创建消息
+       
         messages = new uint256[](count);
         for (uint256 i = 0; i < count; i++) {
             messages[i] = i + 1;
         }
         
-        // 创建验证密钥
+    
         verificationKeys = new VerifierKey[](count);
         for (uint256 i = 0; i < count; i++) {
-            // 转换G2点为我们的内部格式
+        
             G2Point memory lvk1 = G2Point({
                 x0: g2.x0,
                 x1: g2.x1,
@@ -321,7 +307,7 @@ contract BLSVerificationBenchmark {
     }
     
     /**
-     * @dev 测试1条消息的验证
+     * @dev 
      */
     function test1MessageVerification() public {
         (
@@ -331,23 +317,23 @@ contract BLSVerificationBenchmark {
             VerifierKey[] memory allKeys
         ) = generateTestData(10);
         
-        // 只取出1条消息
+    
         uint256[] memory messages = new uint256[](1);
         VerifierKey[] memory keys = new VerifierKey[](1);
         messages[0] = allMessages[0];
         keys[0] = allKeys[0];
         
-        // 测试标准验证
+      
         uint256 startGas = gasleft();
         bool standardSuccess = standardVerification(1, aggSig, tag, messages, keys);
         uint256 standardGas = startGas - gasleft();
         
-        // 测试优化验证
+       
         startGas = gasleft();
         bool optimizedSuccess = optimizedVerification(1, aggSig, tag, messages, keys);
         uint256 optimizedGas = startGas - gasleft();
         
-        // 记录结果
+       
         testResult.standardGas1 = standardGas;
         testResult.optimizedGas1 = optimizedGas;
         testResult.standardSuccess1 = standardSuccess ? 1 : 0;
@@ -358,7 +344,7 @@ contract BLSVerificationBenchmark {
     }
     
     /**
-     * @dev 测试5条消息的验证
+     * @dev 
      */
     function test5MessageVerification() public {
         (
@@ -368,7 +354,7 @@ contract BLSVerificationBenchmark {
             VerifierKey[] memory allKeys
         ) = generateTestData(10);
         
-        // 取出5条消息
+       
         uint256[] memory messages = new uint256[](5);
         VerifierKey[] memory keys = new VerifierKey[](5);
         for (uint i = 0; i < 5; i++) {
@@ -376,17 +362,17 @@ contract BLSVerificationBenchmark {
             keys[i] = allKeys[i];
         }
         
-        // 测试标准验证
+       
         uint256 startGas = gasleft();
         standardVerification(1, aggSig, tag, messages, keys);
         uint256 standardGas = startGas - gasleft();
         
-        // 测试优化验证
+     
         startGas = gasleft();
         optimizedVerification(1, aggSig, tag, messages, keys);
         uint256 optimizedGas = startGas - gasleft();
         
-        // 记录结果
+       
         testResult.standardGas5 = standardGas;
         testResult.optimizedGas5 = optimizedGas;
         
@@ -395,7 +381,7 @@ contract BLSVerificationBenchmark {
     }
     
     /**
-     * @dev 测试10条消息的验证
+     * @dev 
      */
     function test10MessageVerification() public {
         (
@@ -405,17 +391,17 @@ contract BLSVerificationBenchmark {
             VerifierKey[] memory keys
         ) = generateTestData(10);
         
-        // 测试标准验证
+        
         uint256 startGas = gasleft();
         standardVerification(1, aggSig, tag, messages, keys);
         uint256 standardGas = startGas - gasleft();
         
-        // 测试优化验证
+      
         startGas = gasleft();
         optimizedVerification(1, aggSig, tag, messages, keys);
         uint256 optimizedGas = startGas - gasleft();
         
-        // 记录结果
+      
         testResult.standardGas10 = standardGas;
         testResult.optimizedGas10 = optimizedGas;
         
@@ -424,7 +410,7 @@ contract BLSVerificationBenchmark {
     }
     
     /**
-     * @dev 运行所有测试
+     * @dev 
      */
     function runAllTests() public {
         test1MessageVerification();
@@ -442,7 +428,7 @@ contract BLSVerificationBenchmark {
     }
     
     /**
-     * @dev 获取测试结果
+     * @dev
      */
     function getTestResults() public view returns (
         uint256 standardGas1,
@@ -455,7 +441,7 @@ contract BLSVerificationBenchmark {
         uint256 savings5,
         uint256 savings10
     ) {
-        // 计算节省百分比
+      
         uint256 savings1Calc = testResult.standardGas1 > 0 ? 
             ((testResult.standardGas1 - testResult.optimizedGas1) * 100) / testResult.standardGas1 : 0;
             
@@ -478,7 +464,7 @@ contract BLSVerificationBenchmark {
         );
     }
     
-    // ---- 辅助函数 ----
+   
     
     function isInfinity(BN254.G1Point memory p) internal pure returns (bool) {
         return (p.x == 0 && p.y == 0);
@@ -529,4 +515,5 @@ contract BLSVerificationBenchmark {
             y1: point.y1
         });
     }
+
 }
