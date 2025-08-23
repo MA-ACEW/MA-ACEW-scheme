@@ -37,7 +37,9 @@ Run the benchmark for EB-PS operations:
 cd maacew/src
 go test -v -bench=BenchmarkAllEBPSOperations -run=^#
 
-### MA-ACEW Benchmark
+---
+
+## MA-ACEW Benchmark
 
 Run the benchmark for MA-ACEW with thresholds:
 ```bash
