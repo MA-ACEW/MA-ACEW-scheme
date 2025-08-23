@@ -35,13 +35,13 @@ Run the benchmark for EB-PS operations:
 
 ```bash
 cd maacew/src
-go test -v -bench=BenchmarkAllEBPSOperations -run=^#```
-
+go test -v -bench=BenchmarkAllEBPSOperations -run=^#
+```
 
 
 #### MA-ACEW Benchmark
-
 Run the benchmark for MA-ACEW with thresholds:
 ```bash
 cd maacew/src
 go test -v -bench=BenchmarkShowAndVerifyWithThresholds -run=^#
+```
