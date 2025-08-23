@@ -20,7 +20,7 @@ func TestSetup(t *testing.T) {
 		t.Fatal("Setup failed")
 	}
 
-	// 检查生成器不为零点
+	
 	if pp.ua.IsInfinity() || pp.va.IsInfinity() {
 		t.Error("System parameters contain infinity points")
 	}
@@ -1063,7 +1063,7 @@ func BenchmarkEpochSignMultipleSigners(b *testing.B) {
 				totalLongKeyGen += durationLongKeyGen
 
 				if len(signers) != n {
-					b.Fatalf("期望 %d 个签名者，但得到 %d 个", n, len(signers))
+					b.Fatalf("Expected %d signers, but got %d", n, len(signers))
 				}
 
 				epoch := 1
@@ -1125,13 +1125,13 @@ func BenchmarkEpochSignMultipleSigners(b *testing.B) {
 					user = aggregatedUser
 
 					if len(user.epochSigs) <= j {
-						b.Fatalf("epochSigs 在索引 %d 未初始化", j)
+						b.Fatalf("epochSigs not initialized at index %d", j)
 					}
 
 					epochSig := user.epochSigs[j]
 
 					if epochSig.IsInfinity() {
-						b.Fatalf("签名者 %d 的 epoch 签名为无穷点", j)
+						b.Fatalf("Epoch signature of signer %d is the point at infinity", j)
 					}
 
 				}
