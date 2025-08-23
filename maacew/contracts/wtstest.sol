@@ -14,9 +14,9 @@ contract WTSTest {
         wts = WTS(wtsAddress);
     }
     
-    // 测试基础点乘操作的gas消耗
+  
     function testScalarMulGas() public returns (BN254.G1Point memory) {
-        // 使用BN254曲线上的简单有效点
+     
         BN254.G1Point memory p = BN254.G1Point(
             0x2f1c88f236869a9ba3ffb3a7405b21a3f4ce1f5a86ca39d179f383017a6a311a,
             0x1fb86a5d382b5d95bb9cb4ba9b7bad3ca5bd5519413d187fb6c9ff15a12282d4
@@ -26,7 +26,7 @@ contract WTSTest {
         return wts.callScalarMul(p, scalar);
     }
     
-    // 测试配对检查的gas消耗
+  
     function testPairingCheckGas() public returns (bool) {
         BN254.G1Point memory p1 = BN254.G1Point(
             0x2f1c88f236869a9ba3ffb3a7405b21a3f4ce1f5a86ca39d179f383017a6a311a,
@@ -43,7 +43,7 @@ contract WTSTest {
         return wts.simple_pairing_check(p1, p2);
     }
     
-    // 测试hash_to_field函数的gas消耗
+  
     function testHashToFieldGas() public view returns (uint256) {
         BN254.G1Point memory g_b = BN254.G1Point(
             0x2f1c88f236869a9ba3ffb3a7405b21a3f4ce1f5a86ca39d179f383017a6a311a,
@@ -61,7 +61,7 @@ contract WTSTest {
         return wts.hash_to_field(g_b, g_mu, t_prime, extra);
     }
     
-    // 测试设置验证密钥的gas消耗
+  
     function testSetVkGas() public {
         BN254.G1Point memory g1 = BN254.G1Point(
             0x2f1c88f236869a9ba3ffb3a7405b21a3f4ce1f5a86ca39d179f383017a6a311a,
@@ -125,7 +125,7 @@ contract WTSTest {
         wts.set_vk(g1, g2, h2, v2, g_s, g_w, g_tau, h_tau, g_z_H, nb_users);
     }
     
-    // 测试设置证明的gas消耗
+   
     function testSetProofGas() public {
         BN254.G1Point memory g_mu = BN254.G1Point(
             0x1c76bc3f82db1a8d989067937a9b3ae0a5b217c8355c0c475ea0e04689117054,
@@ -176,14 +176,14 @@ contract WTSTest {
             0x1be2c7ef465bd6745ddd46d852d4edc9a13fa0ec16f1a7caf87aae13abb01278
         );
         
-        uint256 t_prime = 7; // 阈值
+        uint256 t_prime = 7; 
         
         wts.set_proof(g_mu, g1_b, g2_b, gq_b, sigma_bls, g1_q, g1_r, h1_p, v_mu, t_prime);
     }
     
-    // 测试基本验证函数的gas消耗
+   
     function testVerifyGas() public view returns (bool) {
-        // 注意：需要先调用testSetVkGas和testSetProofGas设置必要参数
+       
         
         BN254.G2Point memory message_hash = BN254.G2Point(
             0x1aa3c95bdb7f18dcdaef9e8946334b54610d17dd73a45b5ae170e48b34745903, 
@@ -198,3 +198,4 @@ contract WTSTest {
     }
 
 }
+
