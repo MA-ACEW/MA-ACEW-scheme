@@ -1,0 +1,74 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "P_MOD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "R_MOD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "BN254椭圆曲线操作的简化库",
+			"kind": "dev",
+			"methods": {},
+			"title": "BN254",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/epoch.sol": "BN254"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/epoch.sol": {
+			"keccak256": "0x058fe007fadaa6cf216a7285a9bccd268b14484346c47e30c00e9c38b0e88f46",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://6701d7d93db305b761cbb71728f7760af15087eabe04c3fe2c7641310b0b4d11",
+				"dweb:/ipfs/QmVDtBjsqQRnZ62eFwh4kCk8FLf9VCsWazSa3thaftaF9d"
+			]
+		}
+	},
+	"version": 1
+}

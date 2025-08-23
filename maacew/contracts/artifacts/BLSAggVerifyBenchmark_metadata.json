@@ -1,0 +1,320 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "DebugLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "standardGas",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "optimizedGas",
+						"type": "uint256"
+					}
+				],
+				"name": "MultiVerifyResult",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "standardGas",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "optimizedGas",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "standardSuccess",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "optimizedSuccess",
+						"type": "bool"
+					}
+				],
+				"name": "TestCompleted",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "aggVerifyOptimized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "aggVerifyStandard",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTestResults",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "standardGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optimizedGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "standardSuccess",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "optimizedSuccess",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "savingsPercent",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "runAllTests",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					}
+				],
+				"name": "testMultipleVerifications",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "standardTotalGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optimizedTotalGas",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testOptimizedVerify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasUsed",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testResult",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "standardGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optimizedGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "standardSuccess",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "optimizedSuccess",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "savingsPercent",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testStandardVerify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasUsed",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "测试BLS聚合验证函数的gas消耗",
+			"kind": "dev",
+			"methods": {
+				"aggVerifyOptimized()": {
+					"details": "优化聚合验证方法 - 使用随机线性组合，借鉴参考合约的优化策略"
+				},
+				"aggVerifyStandard()": {
+					"details": "标准聚合验证方法"
+				},
+				"getTestResults()": {
+					"details": "获取测试结果"
+				},
+				"runAllTests()": {
+					"details": "运行所有测试"
+				},
+				"testMultipleVerifications(uint256)": {
+					"details": "重复验证测试 - 测试多次验证的gas消耗"
+				},
+				"testOptimizedVerify()": {
+					"details": "测试优化聚合验证方法"
+				},
+				"testStandardVerify()": {
+					"details": "测试标准聚合验证方法"
+				}
+			},
+			"title": "BLSAggVerifyBenchmark",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/aggverify.sol": "BLSAggVerifyBenchmark"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BN254.sol": {
+			"keccak256": "0x535a46aaa7f1c9e0a52cd24c898c5349da8081d22fd5ff7b9009ee036ab19dce",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://d35be10bd010d27f7fd39d71bce4db73d9207097ec666ba1ddb32bc0dcdd1218",
+				"dweb:/ipfs/Qmd3Ru2tj642ew7chmb5XktbM1iMifwV3zSo4qmKjvTdtZ"
+			]
+		},
+		"contracts/Utils.sol": {
+			"keccak256": "0xce9c3f01e0d3217309ea91409e2073d94fd477c3304786e896d134f7c0d2f15d",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://1f22dc859b9eff24731e6899d98f13ae725efdb138c6ecaef6d720f9ff54ffed",
+				"dweb:/ipfs/QmRjmkZnGWnzbrtihRvJxS53xxgJ2xSeivoyxysiVQQbDY"
+			]
+		},
+		"contracts/aggverify.sol": {
+			"keccak256": "0x0781881a007daf0a202965ab86ac8204c75c1b80ab2833a9971cd321ef87fb48",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://f1c14b2975ce21e6a5c65943448c0505be596cc580b40188f717028829041a74",
+				"dweb:/ipfs/QmX3e29YyR1ZYtSC3VY2p9NrVo1qPHbsB8ZEJn2rqJWrRu"
+			]
+		}
+	},
+	"version": 1
+}

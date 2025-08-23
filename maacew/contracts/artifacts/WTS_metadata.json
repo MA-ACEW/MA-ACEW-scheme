@@ -1,0 +1,1466 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "p",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "exp",
+						"type": "uint256"
+					}
+				],
+				"name": "callScalarMul",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g1",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "g2",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "h2",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "v2",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g_s",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g_w",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "g_tau",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "h_tau",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "g_z_H",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nb_users",
+						"type": "uint256"
+					}
+				],
+				"name": "compute_vk",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "g1",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "neg_g1",
+								"type": "tuple"
+							},
+							{
+								"internalType": "uint256",
+								"name": "one_over_n",
+								"type": "uint256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "g2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "h2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "v2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "g_s",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "g_w",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "g_tau",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "h_tau",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "g_Z_H",
+								"type": "tuple"
+							},
+							{
+								"internalType": "uint256",
+								"name": "n",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct VerifierKey",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g_b",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g_mu",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "t_prime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "extra",
+						"type": "uint256"
+					}
+				],
+				"name": "hash_to_field",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g_mu",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g1_b",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "g2_b",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "gq_b",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "sigma_bls",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g1_q",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g1_r",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "h1_p",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "v_mu",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "t_prime",
+						"type": "uint256"
+					}
+				],
+				"name": "set_proof",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g1",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "g2",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "h2",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "v2",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g_s",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "g_w",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "g_tau",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "h_tau",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "g_z_H",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nb_users",
+						"type": "uint256"
+					}
+				],
+				"name": "set_vk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "p1",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "p2",
+						"type": "tuple"
+					}
+				],
+				"name": "simple_pairing_check",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "message_hash",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "t",
+						"type": "uint256"
+					}
+				],
+				"name": "verify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "message_hash",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "t",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "g1",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "neg_g1",
+								"type": "tuple"
+							},
+							{
+								"internalType": "uint256",
+								"name": "one_over_n",
+								"type": "uint256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "g2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "h2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "v2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "g_s",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "g_w",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "g_tau",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "h_tau",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "g_Z_H",
+								"type": "tuple"
+							},
+							{
+								"internalType": "uint256",
+								"name": "n",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct VerifierKey",
+						"name": "_vk",
+						"type": "tuple"
+					}
+				],
+				"name": "verify_optimized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"hash_to_field((uint256,uint256),(uint256,uint256),uint256,uint256)": {
+					"details": "Compute the hash to field element with input \"g_s||g_w||g_b||g_mu||t_prime\"",
+					"params": {
+						"extra": "value used to sample random values for different purposes"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/wts.sol": "WTS"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BN254.sol": {
+			"keccak256": "0x535a46aaa7f1c9e0a52cd24c898c5349da8081d22fd5ff7b9009ee036ab19dce",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://d35be10bd010d27f7fd39d71bce4db73d9207097ec666ba1ddb32bc0dcdd1218",
+				"dweb:/ipfs/Qmd3Ru2tj642ew7chmb5XktbM1iMifwV3zSo4qmKjvTdtZ"
+			]
+		},
+		"contracts/CommonStructs.sol": {
+			"keccak256": "0xc3486b5ea8a305600d0411e9b499bd033a01b9e4270dbb737e7b25040ce6e0be",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://41b13a6458221e824a689c0c7ce79e9e9fc8219112a652098c225edfea71ad28",
+				"dweb:/ipfs/QmaggkzJW1J1fhvwn61YFjdTtDSQ6uPPMYKrCVPFY9Pgav"
+			]
+		},
+		"contracts/Utils.sol": {
+			"keccak256": "0xce9c3f01e0d3217309ea91409e2073d94fd477c3304786e896d134f7c0d2f15d",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://1f22dc859b9eff24731e6899d98f13ae725efdb138c6ecaef6d720f9ff54ffed",
+				"dweb:/ipfs/QmRjmkZnGWnzbrtihRvJxS53xxgJ2xSeivoyxysiVQQbDY"
+			]
+		},
+		"contracts/wts.sol": {
+			"keccak256": "0x7ef9d4a49b22364bfdfb91b633500c89c017897aa0faeecfe83881c139fe381e",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://28d1fdbf156d39626cee378b9bef21b9c232b3b85f914c925cc2700ef63d481f",
+				"dweb:/ipfs/Qmb7w2teL9Lqrp8cxEZfJ2tHH92t5HBXaYiUKjmi1nBmY2"
+			]
+		}
+	},
+	"version": 1
+}

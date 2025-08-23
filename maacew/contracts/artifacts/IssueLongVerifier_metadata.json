@@ -1,0 +1,374 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "_enabled",
+						"type": "bool"
+					}
+				],
+				"name": "setTestMode",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testMode",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "m",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "c",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "s_alpha",
+								"type": "uint256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "t",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "t_g2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "aux1",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "aux2",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct ProofCL",
+						"name": "proof",
+						"type": "tuple"
+					}
+				],
+				"name": "verifyCLProof",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point[2]",
+						"name": "userTagG1",
+						"type": "tuple[2]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "c",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "s_alpha",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "s_beta",
+								"type": "uint256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "t1",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "t2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "t2_g2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "v",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct ProofTG",
+						"name": "proof",
+						"type": "tuple"
+					}
+				],
+				"name": "verifyTGProof",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "验证零知识证明的合约",
+			"kind": "dev",
+			"methods": {
+				"setTestMode(bool)": {
+					"details": "设置测试模式",
+					"params": {
+						"_enabled": "是否启用测试模式"
+					}
+				},
+				"verifyCLProof((uint256,uint256),(uint256,uint256,(uint256,uint256),(uint256,uint256,uint256,uint256),(uint256,uint256),(uint256,uint256)))": {
+					"details": "验证CL证明",
+					"params": {
+						"m": "用户消息点",
+						"proof": "CL证明数据"
+					},
+					"returns": {
+						"_0": "验证结果"
+					}
+				},
+				"verifyTGProof((uint256,uint256)[2],(uint256,uint256,uint256,(uint256,uint256),(uint256,uint256),(uint256,uint256,uint256,uint256),(uint256,uint256)))": {
+					"details": "验证TG证明",
+					"params": {
+						"proof": "TG证明数据",
+						"userTagG1": "用户标签G1点"
+					},
+					"returns": {
+						"_0": "验证结果"
+					}
+				}
+			},
+			"title": "IssueLongVerifier",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IssueLong.sol": "IssueLongVerifier"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BN254.sol": {
+			"keccak256": "0x535a46aaa7f1c9e0a52cd24c898c5349da8081d22fd5ff7b9009ee036ab19dce",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://d35be10bd010d27f7fd39d71bce4db73d9207097ec666ba1ddb32bc0dcdd1218",
+				"dweb:/ipfs/Qmd3Ru2tj642ew7chmb5XktbM1iMifwV3zSo4qmKjvTdtZ"
+			]
+		},
+		"contracts/IssueLong.sol": {
+			"keccak256": "0xa9faa369badf47d36ec5288632b309163736b9d07cc46ce968bce984b767523d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://059d6548f05f87bf462779ab5467384084471173916777b30a0d84551f50984d",
+				"dweb:/ipfs/QmX9WdvY7XeMzSJ6NxTMYtaKkpdtwxHTKNhzUrTKkCunBg"
+			]
+		},
+		"contracts/Utils.sol": {
+			"keccak256": "0xce9c3f01e0d3217309ea91409e2073d94fd477c3304786e896d134f7c0d2f15d",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://1f22dc859b9eff24731e6899d98f13ae725efdb138c6ecaef6d720f9ff54ffed",
+				"dweb:/ipfs/QmRjmkZnGWnzbrtihRvJxS53xxgJ2xSeivoyxysiVQQbDY"
+			]
+		}
+	},
+	"version": 1
+}

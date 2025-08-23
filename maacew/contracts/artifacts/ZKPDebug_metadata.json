@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "testPairing",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasUsed",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testPairingAssembly",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasUsed",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testValidBN254Points",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "result1",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "result2",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasUsed",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/debug.sol": "ZKPDebug"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BN254.sol": {
+			"keccak256": "0x535a46aaa7f1c9e0a52cd24c898c5349da8081d22fd5ff7b9009ee036ab19dce",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://d35be10bd010d27f7fd39d71bce4db73d9207097ec666ba1ddb32bc0dcdd1218",
+				"dweb:/ipfs/Qmd3Ru2tj642ew7chmb5XktbM1iMifwV3zSo4qmKjvTdtZ"
+			]
+		},
+		"contracts/Utils.sol": {
+			"keccak256": "0xce9c3f01e0d3217309ea91409e2073d94fd477c3304786e896d134f7c0d2f15d",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://1f22dc859b9eff24731e6899d98f13ae725efdb138c6ecaef6d720f9ff54ffed",
+				"dweb:/ipfs/QmRjmkZnGWnzbrtihRvJxS53xxgJ2xSeivoyxysiVQQbDY"
+			]
+		},
+		"contracts/debug.sol": {
+			"keccak256": "0x5fad6f98a36eba6d69654ada31d4a3d1d185ce98c0de759b7e9f3134b5395ad6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0fef45b89365ac272ad366d0dd3d59f0061671b419f1965041eec9ef22079888",
+				"dweb:/ipfs/QmWCivTn328Y6fGZ4gGvHLUqUyJj2rPeCqvc9eEdijbt9E"
+			]
+		}
+	},
+	"version": 1
+}

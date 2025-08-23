@@ -1,0 +1,167 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "wtsAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "testHashToFieldGas",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testPairingCheckGas",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testScalarMulGas",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testSetProofGas",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testSetVkGas",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testVerifyGas",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/wtstest.sol": "WTSTest"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BN254.sol": {
+			"keccak256": "0x535a46aaa7f1c9e0a52cd24c898c5349da8081d22fd5ff7b9009ee036ab19dce",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://d35be10bd010d27f7fd39d71bce4db73d9207097ec666ba1ddb32bc0dcdd1218",
+				"dweb:/ipfs/Qmd3Ru2tj642ew7chmb5XktbM1iMifwV3zSo4qmKjvTdtZ"
+			]
+		},
+		"contracts/CommonStructs.sol": {
+			"keccak256": "0xc3486b5ea8a305600d0411e9b499bd033a01b9e4270dbb737e7b25040ce6e0be",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://41b13a6458221e824a689c0c7ce79e9e9fc8219112a652098c225edfea71ad28",
+				"dweb:/ipfs/QmaggkzJW1J1fhvwn61YFjdTtDSQ6uPPMYKrCVPFY9Pgav"
+			]
+		},
+		"contracts/Utils.sol": {
+			"keccak256": "0xce9c3f01e0d3217309ea91409e2073d94fd477c3304786e896d134f7c0d2f15d",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://1f22dc859b9eff24731e6899d98f13ae725efdb138c6ecaef6d720f9ff54ffed",
+				"dweb:/ipfs/QmRjmkZnGWnzbrtihRvJxS53xxgJ2xSeivoyxysiVQQbDY"
+			]
+		},
+		"contracts/wts.sol": {
+			"keccak256": "0x7ef9d4a49b22364bfdfb91b633500c89c017897aa0faeecfe83881c139fe381e",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://28d1fdbf156d39626cee378b9bef21b9c232b3b85f914c925cc2700ef63d481f",
+				"dweb:/ipfs/Qmb7w2teL9Lqrp8cxEZfJ2tHH92t5HBXaYiUKjmi1nBmY2"
+			]
+		},
+		"contracts/wtstest.sol": {
+			"keccak256": "0x1dd6f0582ab7e1033818f4de164b56d2307087757d1202f67a25760247e57761",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://90f896ff393046cb398f8ab3629d40e818b750dd175e0bdbb184a101664ae81c",
+				"dweb:/ipfs/QmNZVtYDAroabrnc4Ag2CBa4nshvzRrTtMK7mcFqFzm2Ln"
+			]
+		}
+	},
+	"version": 1
+}

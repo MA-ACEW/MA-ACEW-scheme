@@ -1,0 +1,731 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "generateTestData",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "h",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "s",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct OptimizedBLSGasTester.Signature",
+						"name": "sig",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "hGamma",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "hDelta",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct OptimizedBLSGasTester.Tag",
+						"name": "tag",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "messages",
+						"type": "uint256[]"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "lvk1",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "lvk2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "tvk",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct OptimizedBLSGasTester.VerifierKey[]",
+						"name": "keys",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "runGasTest",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "standardGas1Msg",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optimizedGas1Msg",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "standardGas5Msgs",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optimizedGas5Msgs",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "standardGas10Msgs",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optimizedGas10Msgs",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "simpleGasTest",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "standardSuccess",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "optimizedSuccess",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "standardGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optimizedGas",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testBN254Basic",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "j",
+						"type": "uint64"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "h",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "s",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct OptimizedBLSGasTester.Signature",
+						"name": "aggSig",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "hGamma",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "hDelta",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct OptimizedBLSGasTester.Tag",
+						"name": "tag",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "messages",
+						"type": "uint256[]"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "lvk1",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "lvk2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "tvk",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct OptimizedBLSGasTester.VerifierKey[]",
+						"name": "verificationKeys",
+						"type": "tuple[]"
+					}
+				],
+				"name": "verifyOptimized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "j",
+						"type": "uint64"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "h",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "s",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct OptimizedBLSGasTester.Signature",
+						"name": "aggSig",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "hGamma",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G1Point",
+								"name": "hDelta",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct OptimizedBLSGasTester.Tag",
+						"name": "tag",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "messages",
+						"type": "uint256[]"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "lvk1",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "lvk2",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "x0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "x1",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y0",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "y1",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct BN254.G2Point",
+								"name": "tvk",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct OptimizedBLSGasTester.VerifierKey[]",
+						"name": "verificationKeys",
+						"type": "tuple[]"
+					}
+				],
+				"name": "verifyStandard",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"generateTestData()": {
+					"details": "生成测试数据"
+				},
+				"runGasTest()": {
+					"details": "测试函数"
+				},
+				"simpleGasTest()": {
+					"details": "简化版测试函数，只测试1条消息的情况，并返回详细信息"
+				},
+				"testBN254Basic()": {
+					"details": "测试基本BN254操作"
+				},
+				"verifyOptimized(uint64,((uint256,uint256),(uint256,uint256)),((uint256,uint256),(uint256,uint256)),uint256[],((uint256,uint256,uint256,uint256),(uint256,uint256,uint256,uint256),(uint256,uint256,uint256,uint256))[])": {
+					"details": "优化验证方法 - 使用随机线性组合减少配对次数"
+				},
+				"verifyStandard(uint64,((uint256,uint256),(uint256,uint256)),((uint256,uint256),(uint256,uint256)),uint256[],((uint256,uint256,uint256,uint256),(uint256,uint256,uint256,uint256),(uint256,uint256,uint256,uint256))[])": {
+					"details": "标准验证方法"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/testeb.sol": "OptimizedBLSGasTester"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BN254.sol": {
+			"keccak256": "0x535a46aaa7f1c9e0a52cd24c898c5349da8081d22fd5ff7b9009ee036ab19dce",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://d35be10bd010d27f7fd39d71bce4db73d9207097ec666ba1ddb32bc0dcdd1218",
+				"dweb:/ipfs/Qmd3Ru2tj642ew7chmb5XktbM1iMifwV3zSo4qmKjvTdtZ"
+			]
+		},
+		"contracts/Utils.sol": {
+			"keccak256": "0xce9c3f01e0d3217309ea91409e2073d94fd477c3304786e896d134f7c0d2f15d",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://1f22dc859b9eff24731e6899d98f13ae725efdb138c6ecaef6d720f9ff54ffed",
+				"dweb:/ipfs/QmRjmkZnGWnzbrtihRvJxS53xxgJ2xSeivoyxysiVQQbDY"
+			]
+		},
+		"contracts/testeb.sol": {
+			"keccak256": "0xf5a186bceab1be0a68efd943baf84605b2f47e5c70fc1def45844bc8dbd73588",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://05d16443d829e7a199dcf92227c3aa876264eede8b1658ba44bc63f1b00685c0",
+				"dweb:/ipfs/QmUu7u33UNsNRzq5jzJMDdvpW6RFcHW9vx5WN5DmufSfyX"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,330 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "DebugLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "method",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gas",
+						"type": "uint256"
+					}
+				],
+				"name": "GasUsed",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getTestResults",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "standardGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optimizedGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "standardSuccess",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "optimizedSuccess",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point[3]",
+						"name": "g1Points",
+						"type": "tuple[3]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point[3]",
+						"name": "g2Points",
+						"type": "tuple[3]"
+					}
+				],
+				"name": "pairingOperation",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "runTests",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G1Point",
+						"name": "p1",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "x0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "x1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "y1",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BN254.G2Point",
+						"name": "p2",
+						"type": "tuple"
+					}
+				],
+				"name": "singlePairingOperation",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testOptimizedPairing",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasUsed",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testResult",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "standardGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optimizedGas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "standardSuccess",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "optimizedSuccess",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testStandardPairing",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasUsed",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "只测量配对操作的gas消耗，不进行完整验证",
+			"kind": "dev",
+			"methods": {
+				"getTestResults()": {
+					"details": "获取测试结果"
+				},
+				"pairingOperation((uint256,uint256)[3],(uint256,uint256,uint256,uint256)[3])": {
+					"details": "执行3对配对操作"
+				},
+				"runTests()": {
+					"details": "运行所有测试并存储结果"
+				},
+				"singlePairingOperation((uint256,uint256),(uint256,uint256,uint256,uint256))": {
+					"details": "执行单对配对操作"
+				},
+				"testOptimizedPairing()": {
+					"details": "测试优化配对方法 (1对配对)"
+				},
+				"testStandardPairing()": {
+					"details": "测试标准配对方法 (3对配对)"
+				}
+			},
+			"title": "简化的BLS配对测试",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/testeb.sol": "SimplePairingTest"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BN254.sol": {
+			"keccak256": "0x535a46aaa7f1c9e0a52cd24c898c5349da8081d22fd5ff7b9009ee036ab19dce",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://d35be10bd010d27f7fd39d71bce4db73d9207097ec666ba1ddb32bc0dcdd1218",
+				"dweb:/ipfs/Qmd3Ru2tj642ew7chmb5XktbM1iMifwV3zSo4qmKjvTdtZ"
+			]
+		},
+		"contracts/Utils.sol": {
+			"keccak256": "0xce9c3f01e0d3217309ea91409e2073d94fd477c3304786e896d134f7c0d2f15d",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://1f22dc859b9eff24731e6899d98f13ae725efdb138c6ecaef6d720f9ff54ffed",
+				"dweb:/ipfs/QmRjmkZnGWnzbrtihRvJxS53xxgJ2xSeivoyxysiVQQbDY"
+			]
+		},
+		"contracts/testeb.sol": {
+			"keccak256": "0xc6a3dad070fffafe6cfd8eed01f8f5e03dfa0f114d0f2ca608818a8fcf6b0ee9",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://852f3e394c95a64bfefe2f4e19b72e5e00075d8ae5b578369ebd4fad4372d254",
+				"dweb:/ipfs/QmP8YPja9E6cg1Cf8nsHsNAHQcXgkCe71cRfX2HhFc3EHg"
+			]
+		}
+	},
+	"version": 1
+}
