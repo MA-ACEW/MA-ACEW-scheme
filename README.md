@@ -26,6 +26,13 @@ For transparency and proper attribution, we have added comments in each relevant
 
 ---
 
+## Dependencies
+
+- [Go](https://golang.org/) **version 1.19.x or higher**  
+- Tested on **Ubuntu**
+
+---
+
 ## Running Benchmarks
 
 We provide two main benchmark entry points. Other test functions are also available and can be run individually, but the following are the key benchmarks:
