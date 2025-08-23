@@ -35,7 +35,7 @@ Run the benchmark for EB-PS operations:
 
 ```bash
 cd maacew/src
-go test -v -bench=BenchmarkAllEBPSOperations -run=^#
+go test -v -bench=BenchmarkAllEBPSOperations -run=^#```
 
 
 
