@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
+//This is not our code, the source code is from https://github.com/sourav1547/wts
 pragma solidity ^0.8.13;
 
 import {BN254} from "./BN254.sol";
@@ -23,7 +24,7 @@ struct VerifierKey {
 struct Proof {
     BN254.G1Point g_mu;
     BN254.G1Point g1_b;
-    BN254.G2Point g2_b; // Not part of paper. Needed because we are working in a non symmetric pairing
+    BN254.G2Point g2_b; 
     BN254.G1Point gq_b;
     BN254.G2Point sigma_bls;
     BN254.G1Point g1_q;
@@ -31,4 +32,5 @@ struct Proof {
     BN254.G1Point h1_p;
     BN254.G1Point v_mu;
     uint256 t_prime;
+
 }
