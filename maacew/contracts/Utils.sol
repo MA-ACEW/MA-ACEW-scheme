@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-//
+//This is not our code, the source code is from https://github.com/sourav1547/wts.
 // Copyright (c) 2022 Espresso Systems (espressosys.com)
 // This file is part of the Configurable Asset Privacy for Ethereum (CAPE) library.
 //
@@ -32,4 +32,5 @@ library Utils {
         // swap 16-byte long pairs
         v = (v >> 128) | (v << 128);
     }
+
 }
