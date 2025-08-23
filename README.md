@@ -34,8 +34,8 @@ We provide two main benchmark entry points. Other test functions are also availa
 Run the benchmark for EB-PS operations:
 
 ```bash
-cd maacew/src
-go test -v -bench=BenchmarkAllEBPSOperations -run=^#
+`cd maacew/src
+go test -v -bench=BenchmarkAllEBPSOperations -run=^#`
 
 ---
 
@@ -43,5 +43,5 @@ go test -v -bench=BenchmarkAllEBPSOperations -run=^#
 
 Run the benchmark for MA-ACEW with thresholds:
 ```bash
-cd maacew/src
-go test -v -bench=BenchmarkShowAndVerifyWithThresholds -run=^#
+`cd maacew/src
+go test -v -bench=BenchmarkShowAndVerifyWithThresholds -run=^#`
