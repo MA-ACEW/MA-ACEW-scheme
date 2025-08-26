@@ -2,8 +2,8 @@
 
 This repository contains Go implementations of two cryptographic schemes:
 
-- **EB-PS** (Efficient Baseline Pairing-based Signature)
-- **MA-ACEW** (Multi-Authority Adaptive Ciphertext-Extended With weights)
+- **EB-PS** (Epoch-Bound Pointcheval-Sanders Signature)
+- **MA-ACEW** (Multi-Authority Anonymous Credentials with Epoch-Based Weights)
 
 The implementation includes benchmarking functions for evaluating the performance of these schemes.
 
