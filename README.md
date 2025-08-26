@@ -22,7 +22,7 @@ For transparency and proper attribution, we have added comments in each relevant
   Go implementation of **EB-PS** and **MA-ACEW** schemes.
 
 - `maacew/contracts/`  
-  Solidity implementation of verifiers for smart contract integration.
+  Solidity implementation for smart contract integration.
 
 ---
 
