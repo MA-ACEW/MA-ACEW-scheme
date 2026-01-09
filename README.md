@@ -10,8 +10,8 @@
 
 | Resource | Link | Description |
 | :--- | :--- | :--- |
-| **Full Paper** | [Download PDF](./Full_Paper_Differential%20Trust%20Dynamic%20Multi-Authority%20Anonymous%20Credentials%20with%20Epoch-Weighted%20Updates.pdf) | The accepted version (local copy) |
-| **arXiv** | *[Coming Soon]* | Preprint version (Link to be updated) |
+| **Full Paper (Local)** | [**Download PDF**](./Full_Paper_Differential%20Trust%20Dynamic%20Multi-Authority%20Anonymous%20Credentials%20with%20Epoch-Weighted%20Updates.pdf) | The full version of the accepted paper, hosted directly in this repository. |
+| **Full Paper (arXiv)** | *[Link Coming Soon]* | The same full version, hosted on arXiv for public accessibility. |
 
 
 ---
