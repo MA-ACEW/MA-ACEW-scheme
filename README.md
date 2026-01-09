@@ -1,3 +1,22 @@
+# Differential Trust: Dynamic Multi-Authority Anonymous Credentials with Epoch-Weighted Updates
+
+<!-- 徽章区域：一眼看到顶会信息 -->
+[![USENIX Security 2026](https://img.shields.io/badge/USENIX%20Security-2026-blue.svg)](https://www.usenix.org/conference/usenixsecurity26)
+
+
+> 🎉 **Accepted to the 35th USENIX Security Symposium (USENIX Security 2026)!**
+
+## 📄 Paper & Resources
+
+| Resource | Link | Description |
+| :--- | :--- | :--- |
+| **Full Paper** | [Download PDF](./Full_Paper_Differential%20Trust%20Dynamic%20Multi-Authority%20Anonymous%20Credentials%20with%20Epoch-Weighted%20Updates.pdf) | The accepted version (local copy) |
+| **arXiv** | *[Coming Soon]* | Preprint version (Link to be updated) |
+
+
+---
+
+
 # MA-ACEW & EB-PS Benchmark Implementation
 
 This repository contains Go implementations of two cryptographic schemes:
